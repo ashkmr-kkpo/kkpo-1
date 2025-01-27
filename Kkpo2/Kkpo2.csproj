@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GrpcService1.ServiceDefaults\GrpcService1.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\Kkpo2.ServiceDefaults\Kkpo2.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

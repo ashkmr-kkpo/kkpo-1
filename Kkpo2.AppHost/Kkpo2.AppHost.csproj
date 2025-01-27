@@ -19,7 +19,7 @@
 	  </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Protobuf Include="..\GrpcService1\Protos\greet.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Kkpo2\Protos\greet.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>
