@@ -5,5 +5,6 @@
   <ItemGroup>
     <PackageVersion Include="Grpc.AspNetCore" Version="2.57.0" />
     <PackageVersion Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageVersion Include="Aspire.Npgsql" Version="9.0.0" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,9 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-builder.AddProject<Projects.Kkpo2>("kkpo2");
+var postgres = builder.AddPostgres("postgres")
+    .WithPgWeb()
+    .WithDataVolume("postgres-data");
+var postgresdb = postgres.AddDatabase("postgresdb");
+builder.AddProject<Projects.Kkpo2>("kkpo2").WithReference(postgresdb);
+
 builder.Build().Run();
