@@ -11,15 +11,14 @@
     <UserSecretsId>a1bc6143-529a-439a-ae96-4d2e04443e35</UserSecretsId>
   </PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\Kkpo2\Kkpo2.csproj" />
+	</ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
-	  <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" >
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		  <PrivateAssets>all</PrivateAssets>
-	  </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Protobuf Include="..\Kkpo2\Protos\greet.proto" GrpcServices="Client" />
+    <Protobuf Include="..\Kkpo2\Protos\greet.proto" GrpcServices="Server" />
   </ItemGroup>
 
 </Project>
