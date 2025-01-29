@@ -19,17 +19,10 @@ public class GreeterService : Greeter.GreeterBase
         await using var connection = await this.dataSource.OpenConnectionAsync();
         await using var cmd  = new NpgsqlCommand();
         cmd.Connection = connection;
-        var create = @"
-            CREATE TABLE users(
-                id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-            )";
-        cmd.CommandText = create;
+
+        cmd.CommandText = @"INSERT INTO postgresdb (firstName) VALUES (@firstName)";
+        cmd.Parameters.AddWithValue("firstName", request.Name);
         await cmd.ExecuteNonQueryAsync();
-
-        cmd.CommandText = @"INSERT INTO users (name) VALUES (@name)";
-        cmd.Parameters.AddWithValue("name", request.Name);
-
         return new HelloReply
         {
             Message = "Hello " + request.Name

@@ -6,7 +6,7 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddGrpc();
-builder.AddNpgsqlDataSource(connectionName: "postgres");
+builder.AddNpgsqlDataSource(connectionName: "postgresdb");
 
 
 var app = builder.Build();
