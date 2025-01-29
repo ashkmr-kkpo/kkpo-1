@@ -1,10 +1,10 @@
 -- Postgres init script
-CREATE DATABASE IF NOT EXISTS postgresdb;
+CREATE DATABASE postgresdjjjjjjb;
 
 CREATE TABLE IF NOT EXISTS postgresdb
 (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    firstName text NOT NULL,
+    firstName text NOT NULL
 );
 
 -- Create the Todos table
