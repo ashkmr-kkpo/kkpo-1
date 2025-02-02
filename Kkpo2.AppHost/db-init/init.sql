@@ -1,6 +1,6 @@
 -- Postgres init script
-CREATE DATABASE postgresdjjjjjjb;
-
+CREATE DATABASE postgresdb2;
+\c postgresdb2
 CREATE TABLE IF NOT EXISTS postgresdb
 (
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
