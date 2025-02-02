@@ -3,17 +3,17 @@ using Npgsql;
 
 namespace Kkpo2.Services;
 
-public class GreeterService : Greeter.GreeterBase
+public class KkpoUserService : KkpoUser.KkpoUserBase
 {
     private readonly ILogger<GreeterService> logger;
     private readonly NpgsqlDataSource dataSource;
-    public GreeterService(ILogger<GreeterService> logger, NpgsqlDataSource dataSource)
+    public KkpoUserService(ILogger<GreeterService> logger, NpgsqlDataSource dataSource)
     {
         this.logger = logger;
         this.dataSource = dataSource;
     }
 
-    public override async Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+    public override async Task<RegisterUserResponse> RegisterUser(RegisterUserRequest request, ServerCallContext context)
     {
         await using var connection = await this.dataSource.OpenConnectionAsync();
         await using var cmd  = new NpgsqlCommand();
@@ -22,7 +22,7 @@ public class GreeterService : Greeter.GreeterBase
         cmd.CommandText = @"INSERT INTO postgresdb (firstName) VALUES (@firstName)";
         cmd.Parameters.AddWithValue("firstName", request.Name);
         await cmd.ExecuteNonQueryAsync();
-        return new HelloReply
+        return new RegisterUserResponse
         {
             Message = "Hello " + request.Name
         };

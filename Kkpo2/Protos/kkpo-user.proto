@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "Kkpo2";
+
+package KkpoUser;
+
+// Kkpo2 service definition.
+service KkpoUser {
+  // Registers a user.
+  rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
+}
+
+// Register user request.
+message RegisterUserRequest {
+  string name = 1;
+}
+
+// Register user response.
+message RegisterUserResponse {
+  string message = 1;
+}
