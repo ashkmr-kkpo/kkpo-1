@@ -19,7 +19,7 @@ public class GreeterService : Greeter.GreeterBase
         await using var cmd  = new NpgsqlCommand();
         cmd.Connection = connection;
 
-        cmd.CommandText = @"INSERT INTO postgresdb (firstName) VALUES (@firstName)";
+        cmd.CommandText = @"INSERT INTO users (firstName) VALUES (@firstName)";
         cmd.Parameters.AddWithValue("firstName", request.Name);
         await cmd.ExecuteNonQueryAsync();
         return new HelloReply
