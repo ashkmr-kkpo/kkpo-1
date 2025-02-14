@@ -1,5 +1,6 @@
 using Npgsql;
 using System.Threading.Tasks;
+namespace Kkpo2.Services.Postgres;
 
 public class PostgresStorage : IStorage
 {

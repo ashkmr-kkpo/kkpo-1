@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kkpo2.ServiceDefaults", "Kk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kkpo2-Client", "Kkpo2-Client\Kkpo2-Client.csproj", "{C1F75FBF-D943-48A9-87D2-DC1C928D522F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kkpo2Test", "Kkpo2Test\Kkpo2Test.csproj", "{2289B054-B8AD-4A20-A193-B61F1A66AAB8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1B8E6A38-39F8-4B17-9BF0-02C776B2EA28} = {1B8E6A38-39F8-4B17-9BF0-02C776B2EA28}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +38,10 @@ Global
 		{C1F75FBF-D943-48A9-87D2-DC1C928D522F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1F75FBF-D943-48A9-87D2-DC1C928D522F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1F75FBF-D943-48A9-87D2-DC1C928D522F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2289B054-B8AD-4A20-A193-B61F1A66AAB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2289B054-B8AD-4A20-A193-B61F1A66AAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2289B054-B8AD-4A20-A193-B61F1A66AAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2289B054-B8AD-4A20-A193-B61F1A66AAB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
